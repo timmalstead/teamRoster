@@ -15,10 +15,10 @@ express.get("/", async (request, response) => {
   })
 
   const rowData = rosterSheet.data.sheets[0].data[0].rowData
+  const fV = "formattedValue"
+  const n = "None"
   const teamData = rowData.reduce((arr, data, i) => {
     const dV = data.values
-    const fV = "formattedValue"
-    const n = "None"
     if (i > 0 && dV[8][fV] === "Active")
       arr.push({
         fullName: dV[0][fV] || n,
