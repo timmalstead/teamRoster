@@ -16,6 +16,7 @@ const App = () => {
       })
       const read = await data.json()
       setData(read.data)
+      console.log(read)
     }
     getData()
   }, [])
