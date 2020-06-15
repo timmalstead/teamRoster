@@ -15,8 +15,7 @@ const App = () => {
         credentials: "same-origin",
       })
       const read = await data.json()
-      if (read.status.code === 200) setData(read.data)
-      else console.log(read)
+      setData(read.data)
     }
     getData()
   }, [])
